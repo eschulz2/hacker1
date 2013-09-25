@@ -1,0 +1,6 @@
+<h3><%= @user.username %>'s Comments</h3>
+<ul>
+<% @comments.each do |comment| %>
+  <li><%= comment.text %> | <%= comment.created_at %> | on <a href="/post/<%= comment.post.id %>"><%= comment.post.title %></a></li>
+<% end %>
+</ul>

@@ -1,0 +1,6 @@
+<ol>
+  <% @posts.each do |post| %>
+  <li><a href="/post/<%= post.id %>"><%=post.title %></a> ---by <a href="/user/<%= post.user.id %>"><%= post.user.username %></a> | <%= post.created_at %> | <%= post.comments.length %> comments</li>
+    
+  <% end %>
+</ol>
